@@ -14,8 +14,8 @@
     <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
     <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
     <quarkus.platform.version>3.24.2</quarkus.platform.version>
-    <skipITs>true</skipITs>
     <surefire-plugin.version>3.5.3</surefire-plugin.version>
+    <quarkus.container-image.build>true</quarkus.container-image.build>
   </properties>
 
   <dependencyManagement>
@@ -128,7 +128,6 @@
         <skipITs>false</skipITs>
         <quarkus.native.enabled>true</quarkus.native.enabled>
         <quarkus.native.container-build>true</quarkus.native.container-build>
-        <quarkus.container-image.build>true</quarkus.container-image.build>
       </properties>
     </profile>
   </profiles>

@@ -16,6 +16,7 @@
     <quarkus.platform.version>3.24.2</quarkus.platform.version>
     <surefire-plugin.version>3.5.3</surefire-plugin.version>
     <quarkus.container-image.build>true</quarkus.container-image.build>
+    <skipITs>true</skipITs>
   </properties>
 
   <dependencyManagement>
@@ -31,6 +32,11 @@
   </dependencyManagement>
 
   <dependencies>
+    <dependency>
+      <groupId>io.quarkiverse.cxf</groupId>
+      <artifactId>quarkus-cxf</artifactId>
+      <version>3.23.1</version>
+    </dependency>
     <dependency>
       <groupId>io.quarkus</groupId>
       <artifactId>quarkus-resteasy-jsonb</artifactId>

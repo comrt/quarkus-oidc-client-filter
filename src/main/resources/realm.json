@@ -1,0 +1,53 @@
+{
+  "realm": "test-realm",
+  "enabled": true,
+  "roles": {
+    "client": {
+      "api-client-id": [
+        {
+          "name": "message_get",
+          "clientRole": true,
+          "containerId": "ods-client-id"
+        }
+      ]
+    }
+  },
+  "clients": [
+    {
+      "clientId": "custom-oidc-client-id",
+      "name": "custom-oidc-client-id",
+      "description": "Client ID des BFF in Keycloak",
+      "enabled": true,
+      "clientAuthenticatorType": "client-secret",
+      "secret": "custom-secret",
+      "serviceAccountsEnabled": true
+    },
+    {
+      "clientId": "api-client-id",
+      "name": "api-client-id",
+      "enabled": true
+    }
+  ],
+  "users": [
+    {
+      "username": "service-account-custom--oidc-client-id",
+      "emailVerified": false,
+      "createdTimestamp": 1728886197822,
+      "enabled": true,
+      "totp": false,
+      "serviceAccountClientId": "custom-oidc-client-id",
+      "disableableCredentialTypes": [],
+      "requiredActions": [],
+      "realmRoles": [
+        "default-roles-test-realm"
+      ],
+      "clientRoles": {
+        "api-client-id": [
+          "message_get"
+        ]
+      },
+      "notBefore": 0,
+      "groups": []
+    }
+  ]
+}
